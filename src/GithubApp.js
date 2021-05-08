@@ -1,9 +1,8 @@
-import React from 'react'
+import React from 'react';
+import { AppRouter } from './routers/AppRouter';
 
 export const GithubApp = () => {
     return (
-        <div>
-            <h1>Github search</h1>
-        </div>
+        <AppRouter />
     )
 }
