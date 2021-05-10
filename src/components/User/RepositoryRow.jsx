@@ -1,0 +1,18 @@
+import React from 'react';
+
+export const RepositoryRow = ( props ) => {
+    
+    const { repository, handleRowClick } = props;
+
+    return (
+        <>
+            <tr key={ repository.id } onClick={() => handleRowClick(repository.id)} >
+                <td>{ repository.name }</td>
+                <td>{repository.description}</td>
+                <td>{repository.language}</td>
+                <td>{ repository.updated }</td>
+            </tr>
+            
+        </>
+    )
+}

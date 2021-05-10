@@ -1,9 +1,10 @@
 import React from 'react';
+import { Repository } from '../components/Repository/Repository';
 
 export const RepositoryView = () => {
     return (
         <div className="container mt-5">
-            <h1>Search Repositories</h1>
+            <Repository />
         </div>
     )
 }

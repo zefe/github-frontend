@@ -5,7 +5,7 @@ import logo from '../../assets/images/logo.png';
 
 export const Navbar = () => {
     return (        
-        <nav className="navbar navbar-expand-sm navbar-dark bg-dark justify-content-between" >
+        <nav className="navbar navbar-expand-sm navbar-dark bg-primary justify-content-between" >
             <Link
                 className="navbar-brand"
                 to="/user"
