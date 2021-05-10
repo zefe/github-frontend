@@ -12,6 +12,10 @@
     font-size: 10px;
 
 }
+thead tr {    
+    background: rgba(104, 144, 240, 0.25);
+    font-size: 14px;
+}
 
 th, td {
     padding: 1rem 1rem;
