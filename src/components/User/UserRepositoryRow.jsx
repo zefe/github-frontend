@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const RepositoryRow = ( props ) => {
+export const UserRepositoryRow = ( props ) => {
     
     const { repository, handleRowClick } = props;
 
@@ -10,7 +10,7 @@ export const RepositoryRow = ( props ) => {
                 <td>{ repository.name }</td>
                 <td>{repository.description}</td>
                 <td>{repository.language}</td>
-                <td>{ repository.updated }</td>
+                <td>{ repository.forks }</td>
             </tr>
             
         </>

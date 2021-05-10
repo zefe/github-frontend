@@ -1,55 +1,26 @@
 import React, { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 
 import { UserRepositoryRow } from './UserRepositoryRow';
 import '../../assets/styles/components/user/userRepositoryList.css';
 
-export const UserRepositoryList = () => {
+export const UserRepositoryList = ({ userRepositories }) => {
 
     const handleRowClick = () => {
-        console.log("Hello handle click")
+        //To open repository new window on github
     };
 
-    const [ repositoryList, setRepositoryList ] = useState([
-        {
-            id: 1,
-            name: 'React',
-            description: 'Decription of this repository is not available because you don have permission to see',
-            language: "JavaScript",
-            updated: '24-FEB-2021'
+    const userState = useSelector(state => state.User);
+    
+    const repositoryList = userState.userRepos;
 
-        },
-        {
-            id: 1,
-            name: 'React',
-            description: 'Decription of this repository is not available because you don have permission to see',
-            language: "JavaScript",
-            updated: '24-FEB-2021'
-
-        },
-        {
-            id: 1,
-            name: 'React',
-            description: 'Decription of this repository is not available because you don have permission to see',
-            language: "JavaScript",
-            updated: '24-FEB-2021'
-
-        },
-        {
-            id: 1,
-            name: 'React',
-            description: 'Decription of this repository is not available because you don have permission to see',
-            language: "JavaScript",
-            updated: '24-FEB-2021'
-
-        }
-    ])
 
     const showData = () => {
  
         if(repositoryList.length !== 0){
 
             return  repositoryList.map( repository => (
-                <RepositoryRow
+                <UserRepositoryRow
                     key={ repository.id }
                     repository={ repository }
                     handleRowClick ={ handleRowClick }
@@ -73,7 +44,7 @@ export const UserRepositoryList = () => {
                         <th>REPOSITORY</th>
                         <th>DESCRIPTION</th>
                         <th>LANGUAGE</th>
-                        <th>UPDATED</th>
+                        <th>FORKS</th>
                     </tr>
                 </thead>
                 <tbody>
