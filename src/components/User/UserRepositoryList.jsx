@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { RepositoryRow } from './RepositoryRow';
+import { UserRepositoryRow } from './UserRepositoryRow';
 import '../../assets/styles/components/user/userRepositoryList.css';
 
 export const UserRepositoryList = () => {
