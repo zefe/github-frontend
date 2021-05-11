@@ -32,15 +32,8 @@ input:active {
     border: 1px solid #6890F0;
 }
 
-::placeholder {
+input:placeholder-shown {
     color: #272727;
-    opacity: 50%; /* Firefox */
 }
-  
-:-ms-input-placeholder { /* Internet Explorer 10-11 */
-   color: #272727;
-}
-  
-::-ms-input-placeholder { /* Microsoft Edge */
-   color: #272727;
-}
+
+
