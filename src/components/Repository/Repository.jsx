@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useForm } from '../../Hooks/useForm';
 
@@ -13,42 +13,12 @@ import { Spinner } from '../Common/Spinner';
 
 
 export const Repository = () => {
-    /*
-    const [repositoryList, setrepositoryList] = useState([
-        {
-            id: 1,
-            name: 'React',
-            description: 'Description loremimsuodñlDescription',
-            language: 'Lenguajes',
-            updated: 'Updated 2 days ago'
-        },
-        {
-            id: 2,
-            name: 'React',
-            description: 'Description loremimsuodñl',
-            language: 'Lenguajes',
-            updated: '21-JUN-1985'
-        },
-        {
-            id: 3,
-            name: 'React',
-            description: 'Description loremimsuodñl',
-            language: 'Lenguajes',
-            updated: '21-JUN-1985'
-        },
-    ]);
-    */
     
     const PLACE_HOLDER = 'Search by repository';
     const dispatch = useDispatch();
     const repositoriesState = useSelector(state => state.RepositoryList);
 
     const repositoryList = repositoriesState.data.items;
-
-
-    console.log("LISTA DE REPOSITORIOS")
-    //console.log(repositoryList.length)
-    console.log(Object.entries(repositoriesState.data).length !== 0)
     
     const [ formValues, handleInputChange ] = useForm({
         searchText: ''
@@ -80,7 +50,7 @@ export const Repository = () => {
                 </div>
             )
         }
-        {/*Veryfica que el si el objeto viene vacio */}
+        
         if((Object.entries(repositoriesState.data).length !== 0) && (repositoryList.length !== 0)) {
             return(
                 <div className="repository-container">            

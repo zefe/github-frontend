@@ -4,6 +4,7 @@ import { types } from '../types/githubTypes';
 const URL_API_USERS = 'https://api.github.com/users/';
 const URL_API_REPOSITORIES = 'https://api.github.com/search/repositories?q=';
 
+//Funtion to get user from gihub api 
 export const getUser = (user) => {
     return async( dispatch ) => {
         try{
@@ -36,6 +37,7 @@ export const getUser = (user) => {
     }
 }
 
+//Funtion to get repositories from gihub api 
 export const getRepositoryList = (repository) => {
     return async( dispatch ) => {
         try{
@@ -45,9 +47,6 @@ export const getRepositoryList = (repository) => {
             });
 
             const res = await axios.get(`${URL_API_REPOSITORIES}${repository}`);
-
-            console.log("Repositorios")
-            console.log(res);
 
             dispatch({
                 type: types.REPOSITORY_LIST_SUCCESS,

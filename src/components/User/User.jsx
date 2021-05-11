@@ -109,7 +109,7 @@ export const User = () => {
                         <div className="user-details-card">
                             <h4>Repositories</h4>
                             <div className="avatar">
-                                <img src={ avatar_url } />                                
+                                <img src={ avatar_url } alt="avatar" />                                
                             </div>
                             <div className="user-name">
                                 <span>{ name }</span>
