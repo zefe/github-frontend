@@ -13,6 +13,11 @@ export const getUser = (user) => {
             });
 
             const res = await axios.get(`${URL_API_USERS}${user}`);
+
+                console.log("Promesa1");
+                console.log(res);
+                console.log("Promesa2");
+
             const repos = await axios.get(`https://api.github.com/users/${user}/repos?per_page=5`);
 
             const userDetails = res.data;

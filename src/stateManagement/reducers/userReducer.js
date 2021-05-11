@@ -19,7 +19,7 @@ export const userReducer = (state = initialState, action) => {
                 return {
                     ...state,
                     loading: false,
-                    errorMessage: "user not found"
+                    errorMessage: "User not found"
                 }
             case types.USER_DETAILS_SUCCESS:
                 return {

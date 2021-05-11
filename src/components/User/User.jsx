@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getUser } from '../../stateManagement/actions/githubActions';
 import { useForm } from '../../Hooks/useForm';
 import { Empty } from '../Common/Empty';
+import { EmptyNotFound } from '../Common/EmptyNotFound';
 import { Search } from '../Common/Search';
 import { ReactComponent as IconRepo }  from '../../assets/icons/repo.svg';
 import { ReactComponent as Iconfollowing } from '../../assets/icons/following.svg';
@@ -51,6 +52,15 @@ export const User = () => {
             return  (
                 <div className="container-spinner">
                     <Spinner />
+                </div>
+            )
+        }
+
+        if(userState.errorMessage !== '') {
+            return (
+                <div className="user-not-found">
+                    <h3>{userState.errorMessage}</h3>
+                    <EmptyNotFound />
                 </div>
             )
         }
@@ -134,6 +144,7 @@ export const User = () => {
                 </div>
             )
         }
+
 
         return ( <Empty /> )        
     }; 

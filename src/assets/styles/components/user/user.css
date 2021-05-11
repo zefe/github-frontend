@@ -109,12 +109,17 @@
     font-size: 14px;
 }
 
-.container-spinner {
+.container-spinner, .user-not-found {
     width: 100%;
     min-height: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+}
+
+.user-not-found h3 {
+    color: rgb(223, 81, 81);
 }
 
 @media only screen and (max-width: 1200px) {
