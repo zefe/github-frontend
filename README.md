@@ -3,7 +3,11 @@
 Develop an application that uses the Github API for searching users and repositories and showing the results in a nice way. The application must have at least 2 routes: user search and repositories search with the corresponding navigation. These routes must have a search bar and the search results must appear on the same page.
 
 ## Demo
+[Watch the LIVE project ](https://pokemoon.netlify.app/)
 
+## Design in Figma
+
+[Watch the DESIGN project in Figma](https://www.figma.com/file/KADNvAfhWqMtQZm7jxg4SV/GithubSearch?node-id=0%3A1)
 
 ## Getting Started
 
