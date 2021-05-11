@@ -16,10 +16,11 @@ import '../../assets/styles/components/user/user.css';
 
 
 export const User = () => {
-
+    
+    const PLACE_HOLDER = 'Search by user';
     const dispatch = useDispatch();
-
     const userState = useSelector(state => state.User);
+
     const {
         public_repos,
         followers,
@@ -31,9 +32,6 @@ export const User = () => {
         avatar_url,
         public_gists
     } = userState.data;
-
-    
-    const PLACE_HOLDER = 'Search by user';
 
     const [ formValues, handleInputChange ] = useForm({
         searchText: ''

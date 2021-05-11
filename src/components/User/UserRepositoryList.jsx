@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { UserRepositoryRow } from './UserRepositoryRow';
 import '../../assets/styles/components/user/userRepositoryList.css';
 
-export const UserRepositoryList = ({ userRepositories }) => {
+export const UserRepositoryList = () => {
 
     const handleRowClick = () => {
         //To open repository new window on github
