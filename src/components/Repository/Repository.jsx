@@ -1,13 +1,19 @@
 import React, { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { useForm } from '../../Hooks/useForm';
+
+import { getRepositoryList } from '../../stateManagement/actions/githubActions';
 
 import '../../assets/styles/components/repository/repository.css';
 import { Empty } from '../Common/Empty';
+import { EmptyNotFound } from '../Common/EmptyNotFound';
 import { Search } from '../Common/Search';
 import { RepositoryRow } from './RepositoryRow';
+import { Spinner } from '../Common/Spinner';
+
 
 export const Repository = () => {
-
+    /*
     const [repositoryList, setrepositoryList] = useState([
         {
             id: 1,
@@ -31,31 +37,52 @@ export const Repository = () => {
             updated: '21-JUN-1985'
         },
     ]);
+    */
     
     const PLACE_HOLDER = 'Search by repository';
+    const dispatch = useDispatch();
+    const repositoriesState = useSelector(state => state.RepositoryList);
 
-    const handleSearch = (e) => {
-        e.preventDefault();
-        console.log("Get user details")
-    }
+    const repositoryList = repositoriesState.data.items;
 
+
+    console.log("LISTA DE REPOSITORIOS")
+    //console.log(repositoryList.length)
+    console.log(Object.entries(repositoriesState.data).length !== 0)
+    
     const [ formValues, handleInputChange ] = useForm({
         searchText: ''
     });
 
     const { searchText } = formValues;
 
-    return (
-        <>
-            <Search                
-                searchText={ searchText }
-                handleSearch={ handleSearch }
-                handleInputChange= { handleInputChange }
-                placeholder={ PLACE_HOLDER }
+    const handleSearch = (e) => {
+        e.preventDefault();
+        dispatch( getRepositoryList(searchText) );
+    }
 
-            />
-            {
-                repositoryList ? 
+
+    const showData = () => {
+
+        if(repositoriesState.loading){
+            return  (
+                <div className="container-spinner">
+                    <Spinner />
+                </div>
+            )
+        }
+
+        if(repositoriesState.errorMessage !== '') {
+            return (
+                <div className="user-not-found">
+                    <h3>{repositoriesState.errorMessage}</h3>
+                    <EmptyNotFound />
+                </div>
+            )
+        }
+        {/*Veryfica que el si el objeto viene vacio */}
+        if((Object.entries(repositoriesState.data).length !== 0) && (repositoryList.length !== 0)) {
+            return(
                 <div className="repository-container">            
 
                     <div className="repository-container-list">
@@ -77,9 +104,25 @@ export const Repository = () => {
 
                     </div>
                 </div>
-                :
-                <Empty />
+            )
+        }
 
+        return(
+            <Empty />
+        )
+     }
+
+    return (
+        <>
+            <Search                
+                searchText={ searchText }
+                handleSearch={ handleSearch }
+                handleInputChange= { handleInputChange }
+                placeholder={ PLACE_HOLDER }
+
+            />
+            {
+                showData()
             }
 
         </>

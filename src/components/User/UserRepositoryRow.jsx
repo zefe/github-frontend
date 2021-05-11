@@ -12,7 +12,6 @@ export const UserRepositoryRow = ( props ) => {
                 <td>{repository.language}</td>
                 <td>{ repository.forks }</td>
             </tr>
-            
         </>
     )
 }
