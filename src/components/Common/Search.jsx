@@ -16,6 +16,7 @@ export const Search = ({ searchText, handleSearch, handleInputChange, placeholde
                         name="searchText"
                         value={ searchText }
                         onChange={ handleInputChange }
+                        autoComplete="off"
                         required
                     />
                     <button className="search-button" >

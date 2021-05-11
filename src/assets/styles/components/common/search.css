@@ -16,7 +16,6 @@
     align-items: center;
     outline: none;
     border: none;
-    
 }
 
 .search-wrapper > .search-input {
@@ -24,7 +23,7 @@
 }
 
 .search-input {
-    background: none;
+    background: transparent;
     outline: none;
     font-size: 1rem;
     padding-left: 30px;
@@ -54,3 +53,4 @@
     justify-content: center;
 
 }
+
