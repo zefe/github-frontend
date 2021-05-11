@@ -4,6 +4,7 @@ import {
     Switch,
     Route
   } from "react-router-dom";
+import PageNotFound from '../components/Common/PageNotFound';
 import { Navbar } from '../components/Navbar/Navbar';
 import { RepositoryView } from '../Views/RepositoryView';
 import { UserView } from '../Views/UserView';
@@ -14,9 +15,9 @@ export const AppRouter = () => {
             <div>
                 <Navbar />
                 <Switch>
-                    <Route exact path="/user" component={ UserView } />
-                    <Route exact path="/repository" component={ RepositoryView } />
                     <Route exact path="/" component={ UserView } />
+                    <Route exact path="/repository" component={ RepositoryView } />
+                    <Route component={ PageNotFound } />
                 </Switch>
             </div>
         </Router>

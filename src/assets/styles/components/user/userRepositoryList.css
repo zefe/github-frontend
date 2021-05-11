@@ -29,6 +29,5 @@ td {
 
 tbody tr:hover {
     transition: 100ms;
-    cursor: pointer;    
     box-shadow: 2px 2px 10px rgba(86, 108, 214, .3);
 }

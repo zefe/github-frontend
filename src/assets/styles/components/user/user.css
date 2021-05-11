@@ -63,6 +63,7 @@
 }
 .user-details-card h4, .user-repositories-list h4 {
     font-weight: 300;
+    margin-bottom: 40px;
 }
 
 .user-repositories-list {

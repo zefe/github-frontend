@@ -8,7 +8,7 @@ export const Navbar = () => {
         <nav className="navbar navbar-expand-sm navbar-dark bg-primary justify-content-between" >
             <Link
                 className="navbar-brand"
-                to="/user"
+                to="/"
             >
                 <img src={ logo } alt="Github search engine" />
             </Link>
@@ -22,7 +22,7 @@ export const Navbar = () => {
                             activeClassName="active"
                             className="nav-item nav-link" 
                             exact
-                            to="/user"
+                            to="/"
                         >
                             User
                         </NavLink >                        
