@@ -1,0 +1,172 @@
+
+.user-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 100px;
+}
+
+.user-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-row-gap: 1.5rem;
+    grid-column-gap: 1.5rem;
+    margin-top: 20px;
+}
+.card-single {
+    display: flex;
+    border-radius: 7px;
+    background-color: #FFF;
+    border: 1px solid rgba(92, 92, 92, 0.2);
+    padding: 20px;
+}
+.card-single span{
+    width: 30%;
+    font-size: 2.5rem;
+    color: #00A877;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card-body  {
+    width: 50%;
+    height: 90px;
+    word-wrap: break-word;
+}
+.card-body h1{
+    font-weight: 500;
+    font-size: 24px;
+    color: #272727;
+}
+.card-body small {
+    font-weight: 200;
+    font-size: 18px;
+    color: #6C6C6C;
+}
+
+
+.user-details {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.user-details-card {
+    border-radius: 7px;
+    background-color: #FFF;
+    border: 1px solid rgba(92, 92, 92, 0.2);
+    width: 24%;
+    padding: 20px;
+    margin-top: 20px;
+}
+.user-details-card h4, .user-repositories-list h4 {
+    font-weight: 300;
+    margin-bottom: 40px;
+}
+
+.user-repositories-list {
+    width: 74%;
+    padding: 20px;    
+    margin-top: 20px;
+    border-radius: 7px;
+    background-color: #FFF;
+    border: 1px solid rgba(92, 92, 92, 0.2);
+}
+
+
+
+.avatar {
+    margin-top: 20px;
+}
+.avatar img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+
+.user-name {
+    display: flex;
+    flex-direction: column;
+}
+.user-name span:first-child {
+    font-size: 18px;
+    font-weight: 600;
+}
+.user-name span:last-child {
+    font-size: 14px;
+    color: #6C6C6C;
+}
+.user-info {
+    margin: 20px 0;
+}
+.item-info span:first-child {
+    color: #6890F0;
+}
+.item-info span:last-child {
+    padding-left: 5px;
+    font-size: 14px;
+}
+
+.container-spinner, .user-not-found {
+    width: 100%;
+    min-height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.user-not-found h3 {
+    color: rgb(223, 81, 81);
+}
+
+@media only screen and (max-width: 1200px) {
+    .user-cards {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-row-gap: 1rem;
+        grid-column-gap: 1rem;
+    }
+    .card-single {
+        margin: 0;
+        padding: 0;
+    }
+    .user-details-card {
+        margin: 0;
+    }
+}
+
+
+@media only screen and (max-width: 990px) {
+    
+    .user-container {
+        flex-direction: column-reverse;
+    }
+    .user-cards {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .user-details {
+        flex-direction: column;
+    }
+    .user-details-card {
+        width: 100%;
+    }
+    .user-details-table {
+        width: 100%;
+    }
+    .user-repositories-list {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .user-cards {
+        grid-template-columns: 100%;
+    }
+    .user-details-card {
+        margin: 0;
+    }
+}

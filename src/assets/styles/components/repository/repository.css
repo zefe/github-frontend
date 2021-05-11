@@ -1,0 +1,31 @@
+.repository-container {
+    width: 100%;
+}
+
+.repository-container-list {
+    min-height: 70vh;
+}
+
+.list-header { 
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 60px;
+}
+
+.list-title {
+    width: 30%;
+}
+.list-title h3 {
+    color: #272727;
+    font-weight: 300;
+}
+
+@media (max-width: 425px)  {
+    .list-title {
+        width: 100%;
+        padding: 0;
+        margin-top: 15px;
+        margin-left: 15px;
+    }
+}

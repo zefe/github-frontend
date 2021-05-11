@@ -1,0 +1,122 @@
+.repository-row {
+    width: 100%;
+    margin-top: 10px;
+}
+.repository-row a {
+    text-decoration: none;
+    color: #272727;
+}
+.repository-row a:hover {
+    cursor: pointer;
+    text-decoration: none;
+    color: #6890F0;
+}
+.repository-item {
+    display: flex;
+    align-items: center;
+    height: auto;
+    min-height: 80px;
+    border-radius: 7px;
+    background-color: #FFF;
+    border: 1px solid rgba(92, 92, 92, 0.2);
+}
+.repository-item:hover {
+    
+    box-shadow: 2px 2px 10px rgba(86, 108, 214, .3);
+}
+.repository-name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.repository-name img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.repository-owner {
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.repository-owner span:first-child {
+    font-size: 16px;
+    margin-bottom: -5px;
+}
+.repository-owner span:last-child {
+    font-size: 12px;
+    color: #6C6C6C;
+}
+
+.container-two-last-columns {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.repository-language, .repository-updated {
+    display: flex;
+    align-items: center;
+}
+.repository-language span:last-child {
+    margin-left: 10px;
+}
+.repository-updated span:last-child {
+    margin-left: 10px;
+}
+
+.repository-item div:first-child {
+    width: 20%;
+}
+
+.repository-item div:nth-child(2) {
+    width: 35%;
+}
+
+.repository-item div:last-child {
+    width: 45%;
+}
+
+@media (max-width: 425px)  {
+    
+    .repository-item {
+        margin-top: 20px;
+        padding: 20px;
+    }
+    .repository-item {
+        flex-direction: column;
+        height: auto;
+    }
+    .repository-item div:first-child {
+        width: 100%;
+    }
+    
+    .repository-item div:nth-child(2) {
+        width: 100%;
+    }
+    
+    .repository-item div:last-child {
+        width: 100%;
+    }
+
+    .repository-language span:last-child {
+        margin-left: 5px;
+    }
+    .repository-updated span:last-child {
+        margin-left: 5px;
+    }
+
+    .repository-name {
+        margin-bottom: 20px;
+    }
+
+    .container-two-last-columns {
+        margin-top:15px;
+    }
+
+    .repository-language span, .repository-updated span {
+        font-size: 12.5px;
+    }
+
+}

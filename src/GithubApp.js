@@ -1,9 +1,12 @@
-import React from 'react'
+import React from 'react';
+import { Provider } from 'react-redux';
+import { AppRouter } from './routers/AppRouter';
+import { store } from './stateManagement/store/store';
 
 export const GithubApp = () => {
     return (
-        <div>
-            <h1>Github search</h1>
-        </div>
+        <Provider store={ store }>
+            <AppRouter />
+        </Provider>
     )
 }
